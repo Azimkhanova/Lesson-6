@@ -1,4 +1,4 @@
-package com.example.registrationform;
+package com.example.registrationform.database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -9,10 +9,8 @@ public class StoreDatabase extends SQLiteOpenHelper {
 
     public static final String TABLE_USERS = "users";
 
-    public static final String COLUMN_USER_NAME = "user_name";
+
     public static final String COLUMN_USER_EMAIL = "user_mail";
-    public static final String COLUMN_USER_CITY = "user_city";
-    public static final String COLUMN_USER_PHONE = "user_phone";
     public static final String COLUMN_USER_PASSWORD = "user_password";
 
 
@@ -26,10 +24,7 @@ public class StoreDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_USERS + "(" +
-                COLUMN_USER_NAME + "TEXT, " +
                 COLUMN_USER_EMAIL + "TEXT, " +
-                COLUMN_USER_CITY + "TEXT, " +
-                COLUMN_USER_PHONE + "INTEGER, " +
                 COLUMN_USER_PASSWORD + "TEXT)");
 
 
